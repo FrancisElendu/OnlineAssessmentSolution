@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AssessmentOne
+﻿namespace AssessmentOne
 {
     public class Find_the_first_non_repeating_character_in_a_string
     {
@@ -14,7 +8,7 @@ namespace AssessmentOne
                 return null;
 
             Dictionary<char, int> charCount = new Dictionary<char, int>();
-            
+
             // Count occurrences of each character
             foreach (char c in input)
             {
@@ -27,7 +21,7 @@ namespace AssessmentOne
                     charCount[c] = 1;
                 }
             }
-            
+
             // Find the first non-repeating character
             foreach (char c in input)
             {

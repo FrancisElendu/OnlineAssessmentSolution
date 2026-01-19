@@ -31,21 +31,23 @@ using AssessmentOne;
 
 //int[] numbers = { 1, 2, 3, 2, 4, 1, 5, 3, 6 };
 //int[] uniqueNumbers = Remove_duplicate_elements_from_an_array_without_using_LINQ_Distinct.RemoveDuplicates(numbers);
-//string[] words = { "apple", "banana", "apple", "orange", "banana", "grape" };
-//string[] uniqueWords = Remove_duplicate_elements_from_an_array_without_using_LINQ_Distinct.RemoveDuplicates(words);
+string[] words = { "apple", "banana", "apple", "orange", "banana", "grape" };
+string[] uniqueWords = Remove_duplicate_elements_from_an_array_without_using_LINQ_Distinct.RemoveDuplicates(words);
 
-//Console.WriteLine("Original array: " + string.Join(", ", words));
-//Console.WriteLine("Array without duplicates: " + string.Join(", ", uniqueWords));
+//string uniqueCharacters = Remove_Duplicate_Characters_from_a_String.RemoveDuplicates(words[0]);
 
-Console.WriteLine("First Non-Repeating Character Finder");
-Console.WriteLine("====================================\n");
-string[] testCases = { "swiss", "hello", "aabbcc", "programming", "", "a" };
+Console.WriteLine("Original array: " + string.Join(", ", words));
+Console.WriteLine("Array without duplicates: " + string.Join(", ", uniqueWords));
 
-foreach (string test in testCases)
-{
-    char? result = Find_the_first_non_repeating_character_in_a_string.FirstNonRepeatingCharacter(test);
-    Console.WriteLine($"Input: '{test}' -> First non-repeating: {(result.HasValue ? result.ToString() : "None")}");
-}
+//Console.WriteLine("First Non-Repeating Character Finder");
+//Console.WriteLine("====================================\n");
+//string[] testCases = { "swiss", "hello", "aabbcc", "programming", "", "a" };
+
+//foreach (string test in testCases)
+//{
+//    char? result = Find_the_first_non_repeating_character_in_a_string.FirstNonRepeatingCharacter(test);
+//    Console.WriteLine($"Input: '{test}' -> First non-repeating: {(result.HasValue ? result.ToString() : "None")}");
+//}
 
 //var testCases = new Dictionary<string, string>
 //        {
