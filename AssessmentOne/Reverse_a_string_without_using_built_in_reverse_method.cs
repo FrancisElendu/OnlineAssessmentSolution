@@ -7,22 +7,31 @@
             if (string.IsNullOrEmpty(input))
                 return input;
 
-            char[] charArray = input.ToCharArray();
-            int start = 0;
-            int end = charArray.Length - 1;
+            //char[] charArray = input.ToCharArray();
+            //int start = 0;
+            //int end = charArray.Length - 1;
 
-            while (start < end)
+            //while (start < end)
+            //{
+            //    // Swap characters
+            //    char temp = charArray[start];
+            //    charArray[start] = charArray[end];
+            //    charArray[end] = temp;
+
+            //    start++;
+            //    end--;
+            //}
+
+            //return new string(charArray);
+
+            //Or use Stack<char> implemenatation
+            var stack = new Stack<char>();
+            foreach (char c in input)
             {
-                // Swap characters
-                char temp = charArray[start];
-                charArray[start] = charArray[end];
-                charArray[end] = temp;
-
-                start++;
-                end--;
+                stack.Push(c);
             }
 
-            return new string(charArray);
+            return string.Concat(stack);
         }
     }
 }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AssessmentOne
+﻿namespace AssessmentOne
 {
     public class Check_If_Two_Strings_Are_Anagrams
     {
@@ -16,17 +10,35 @@ namespace AssessmentOne
             if (s1.Length != s2.Length)
                 return false;
 
-            Span<int> counts = stackalloc int[26];
+            Span<int> charCount = stackalloc int[26];
 
-            for (int i = 0; i < s1.Length; i++)
+            // Count characters in first string
+            foreach (char c in s1)
             {
-                counts[char.ToLowerInvariant(s1[i]) - 'a']++;
-                counts[char.ToLowerInvariant(s2[i]) - 'a']--;
+                if (char.IsLetter(c))
+                {
+                    charCount[char.ToLower(c) - 'a']++;
+                }
             }
 
+            // Subtract counts using second string
+            foreach (char c in s2)
+            {
+                if (char.IsLetter(c))
+                {
+                    int index = char.ToLower(c) - 'a';
+                    charCount[index]--;
+
+                    // Early exit if count goes negative
+                    if (charCount[index] < 0)
+                        return false;
+                }
+            }
+
+            // Verify all counts are zero
             for (int i = 0; i < 26; i++)
             {
-                if (counts[i] != 0)
+                if (charCount[i] != 0)
                     return false;
             }
 

@@ -44,21 +44,50 @@ using AssessmentOne;
 //• "apple" and "apples"         ← Different lengths
 
 
-string str1 = "hello";
-string str2 = "world";
+//string str1 = "astronomer ";
+//string str2 = "moon starer";
 
-var result = Check_If_Two_Strings_Are_Anagrams.AreAnagrams(str1, str2);
-string resultStr = result ? "The two strings are Anagrams" : "The two strings are NOT Anagrams";
-Console.WriteLine($"{resultStr}");
+//var result = Check_If_Two_Strings_Are_Anagrams.AreAnagrams(str1, str2);
+//string resultStr = result ? "The two strings are Anagrams" : "The two strings are NOT Anagrams";
+//Console.WriteLine($"{resultStr}");
 
 //int[] numbers = { 1, 2, 3, 2, 4, 1, 5, 3, 6 };
 //int[] uniqueNumbers = Remove_duplicate_elements_from_an_array_without_using_LINQ_Distinct.RemoveDuplicates(numbers);
-//string[] words = { "apple", "banana", "apple", "orange", "banana", "grape" };
+//string[] words = { "orange", "apple", "banana", "apple", "banana", "grape" };
+//string[] palindromeWords = { "radar", "racecar", "level", "kayak", "civic", "madam", "noon", "refer", "rotor", "tenet", "Able was I ere I saw Elba", "Rats live on no evil star", "Never odd or even" };
+string sentence = "the quick brown fox jumps over the lazy dog";
+var wordCounts = Count_The_Occurence_Of_Each_Word_In_A_Sentence.CountWordOccurrences(sentence);
+foreach (var kvp in wordCounts)
+{
+    Console.WriteLine($"Word: '{kvp.Key}' - Occurrences: {kvp.Value}");
+}
+
+
+//foreach (string word in palindromeWords)
+//{
+//    var result = Reverse_a_string_without_using_built_in_reverse_method.ReverseString(word.ToLower());
+//    if(word.ToLower() == result)
+//        Console.WriteLine($"The string: {word} is a Palindrome");
+//    else
+//        Console.WriteLine($"The string: {word} is NOT a Palindrome");
+//}
+
+//var reversedWords = Reverse_Words_In_A_Sentense.ReverseWordInASentense(words);
+//foreach(var word in reversedWords)
+//{
+//    Console.WriteLine(word);
+//}
+//string firstRepeatingElement = Find_First_Repeating_Element_In_An_Array.FindFirstRepeatingElementInAnArray(words);
+//int? firstRepeatingElement = Find_First_Repeating_Element_In_An_Array.FindFirstRepeatingElementInAnArray(numbers);
+//Console.WriteLine("First repeating element: " + (firstRepeatingElement));
+
+
 //string[] uniqueWords = Remove_duplicate_elements_from_an_array_without_using_LINQ_Distinct.RemoveDuplicates(words);
 
 //string uniqueCharacters = Remove_Duplicate_Characters_from_a_String.RemoveDuplicates(words[0]);
 
 //Console.WriteLine("Original array: " + string.Join(", ", words));
+//Console.WriteLine("String without duplicates: " +  uniqueCharacters);
 //Console.WriteLine("Array without duplicates: " + string.Join(", ", uniqueWords));
 
 //Console.WriteLine("First Non-Repeating Character Finder");
