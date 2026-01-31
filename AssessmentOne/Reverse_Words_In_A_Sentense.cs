@@ -9,11 +9,12 @@ namespace AssessmentOne
 {
     public class Reverse_Words_In_A_Sentense
     {
-        public static string[] ReverseWordInASentense(string[] input)
+        public static string[] ReversePositionOfEachWordInASentense(string[] input)
         {
             if (input == null || input.Length == 0)
                 return default;
 
+            //use Stack<char> implemenatation. It follows the LIFO (Last In, First Out) principle.
             var stack = new Stack<string>();
             foreach (var c in input)
             {
@@ -22,5 +23,25 @@ namespace AssessmentOne
 
             return stack.ToArray();
         }
+
+        //Or use this to reverse each word as well as position from last to first:
+        //public static string[] ReverseEachWordAndItsPositionInASentense(string[] input)
+        //{
+        //    if (input == null || input.Length == 0)
+        //        return default;
+
+        //    //use Stack<char> implemenatation. It follows the LIFO (Last In, First Out) principle.
+        //    var stack = new Stack<string>();
+        //    string result = string.Empty;
+        //    foreach (string c in input)
+        //    {
+        //        Stack<char> stack1 = new(c);
+
+        //        result = string.Concat(stack1);
+        //        stack.Push(result);
+        //    }
+
+        //    return stack.ToArray();
+        //}
     }
 }

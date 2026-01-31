@@ -24,14 +24,20 @@
 
             //return new string(charArray);
 
-            //Or use Stack<char> implemenatation
-            var stack = new Stack<char>();
-            foreach (char c in input)
-            {
-                stack.Push(c);
-            }
+            ////Or use Stack<char> implemenatation. It follows the LIFO (Last In, First Out) principle.
+            //var stack = new Stack<char>();
+            //foreach (char c in input)
+            //{
+            //    stack.Push(c);
+            //}
 
-            return string.Concat(stack);
+            //return string.Concat(stack);
+
+            //Or use Stack<char> implemenatation. It follows the LIFO (Last In, First Out) principle.
+            Stack<char> stack = new (input);
+
+            var result = string.Concat(stack);
+            return result;
         }
     }
 }

@@ -22,6 +22,8 @@
                 {
                     wordCount[trimmedWord] = 1;
                 }
+                //this should remove the if statement
+                wordCount[trimmedWord] = wordCount.ContainsKey(trimmedWord) ? wordCount[trimmedWord] + 1 : 1;
             }
             return wordCount;
         }
