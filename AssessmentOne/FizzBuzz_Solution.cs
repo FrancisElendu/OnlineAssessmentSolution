@@ -41,6 +41,37 @@ namespace AssessmentOne
             return results;
         }
 
+        #region Old Solution
+        //// Create a dictionary to store the conditions and their corresponding outputs
+        //Dictionary<int, string> fizzBuzzDict = new Dictionary<int, string>
+        //{
+        //    { 3, "Fizz" },
+        //    { 5, "Buzz" }
+        //};
+
+        //// Create array to store the results
+        //string[] answer2 = new string[n];
+
+        //for (int i = 1; i <= n; i++)
+        //{
+        //    string result = "";
+
+        //    // Check each condition in the dictionary
+        //    foreach (var kvp in fizzBuzzDict)
+        //    {
+        //        if (i % kvp.Key == 0)
+        //        {
+        //            result += kvp.Value;
+        //        }
+        //    }
+
+        //    // If no condition matched, store the number itself
+        //    answer2[i - 1] = string.IsNullOrEmpty(result) ? i.ToString() : result;
+        //}
+
+        //return answer2;
+        #endregion
+
         //public static void FizzBuzz(int n)
         //{
         //    for (int i = 1; i <= n; i++)

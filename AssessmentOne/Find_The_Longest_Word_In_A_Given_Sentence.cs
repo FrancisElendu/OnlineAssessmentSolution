@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AssessmentOne
+﻿namespace AssessmentOne
 {
     public class Find_The_Longest_Word_In_A_Given_Sentence
     {

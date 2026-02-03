@@ -37,6 +37,8 @@
         //Or use this
         public static char? FirstNonRepeatingCharacter(string input)
         {
+            //input = "onomerorr ";
+            //input = "aabbcc";
             if (string.IsNullOrEmpty(input))
                 return null;
 
@@ -53,11 +55,11 @@
                     NonDuplicateChar.Remove(c);
                 }
             }
-            //if (NonDuplicateChar.Count == 0)
-            //    return null;
-            //return NonDuplicateChar.ToArray().FirstOrDefault().Key;
-            char result = NonDuplicateChar.Count == 0 ? '\0' : NonDuplicateChar.First().Key;
-            return result;
+            if (NonDuplicateChar.Count == 0)
+                return null;
+            return NonDuplicateChar.ToArray().FirstOrDefault().Key;
+            //char result = NonDuplicateChar.Count == 0 ? '\0' : NonDuplicateChar.FirstOrDefault().Key;
+            //return result;
         }
     }
 }

@@ -14,14 +14,14 @@
             foreach (string word in words)
             {
                 string trimmedWord = word.Trim().ToLower();
-                if (wordCount.ContainsKey(trimmedWord))
-                {
-                    wordCount[trimmedWord]++;
-                }
-                else
-                {
-                    wordCount[trimmedWord] = 1;
-                }
+                //if (wordCount.ContainsKey(trimmedWord))
+                //{
+                //    wordCount[trimmedWord]++;
+                //}
+                //else
+                //{
+                //    wordCount[trimmedWord] = 1;
+                //}
                 //this should remove the if statement
                 wordCount[trimmedWord] = wordCount.ContainsKey(trimmedWord) ? wordCount[trimmedWord] + 1 : 1;
             }

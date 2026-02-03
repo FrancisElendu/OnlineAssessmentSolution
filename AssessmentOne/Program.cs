@@ -44,20 +44,20 @@ using AssessmentOne;
 //• "apple" and "apples"         ← Different lengths
 
 
-//string str1 = "astronomerorr ";
+string str1 = "astronomerorr ";
 //string str2 = "moon starer";
 
 //var result = Check_If_Two_Strings_Are_Anagrams.AreAnagrams(str1, str2);
 //string resultStr = result ? "The two strings are Anagrams" : "The two strings are NOT Anagrams";
 //Console.WriteLine($"{resultStr}");
 
-//var result = Find_All_Duplicate_Characters_In_A_String.FindDuplicateCharactersInAString(str1);
-//Console.WriteLine($"Original string: {str1}");
-//Console.WriteLine("Duplicate characters and their counts:");
-//foreach (var kvp in result)
-//{
-//    Console.WriteLine($"Word: '{kvp.Key}' - Occurrences: {kvp.Value}");
-//}
+var result = Find_All_Duplicate_Characters_In_A_String.FindDuplicateCharactersInAString(str1);
+Console.WriteLine($"Original string: {str1}");
+Console.WriteLine("Duplicate characters and their counts:");
+foreach (var kvp in result)
+{
+    Console.WriteLine($"Word: '{kvp.Key}' - Occurrences: {kvp.Value}");
+}
 
 //int[] numbers = { 1, 2, 3, 2, 4, 1, 5, 3, 6 };
 //int[] uniqueNumbers = Remove_duplicate_elements_from_an_array_without_using_LINQ_Distinct.RemoveDuplicates(numbers);
@@ -74,6 +74,12 @@ using AssessmentOne;
 //foreach (var kvp in wordCounts)
 //{
 //    Console.WriteLine($"Word: '{kvp.Key}' - Occurrences: {kvp.Value}");
+//}
+
+//var charCounts = Count_The_Occurence_Of_Each_Character_In_A_Word.CountCharacterOccurrences("astronomerorr");
+//foreach (var kvp in charCounts)
+//{
+//    Console.WriteLine($"Character: '{kvp.Key}' - Occurrences: {kvp.Value}");
 //}
 
 
@@ -117,16 +123,25 @@ using AssessmentOne;
 //Console.WriteLine("String without duplicates: " +  uniqueCharacters);
 //Console.WriteLine("Array without duplicates: " + string.Join(", ", uniqueWords));
 
-Console.WriteLine("First Non-Repeating Character Finder");
-Console.WriteLine("====================================\n");
-//string[] testCases = { ""};
-string[] testCases = { "swiss", "hello", "aabbcc", "programming", "", "a" };
+//Console.WriteLine("First Non-Repeating Character Finder");
+//Console.WriteLine("====================================\n");
+////string[] testCases = { "aabbcc" };
+//string[] testCases = { "swiss", "hello", "aabbcc", "programming", "", "a" };
 
-foreach (string test in testCases)
-{
-    char? result = Find_the_first_non_repeating_character_in_a_string.FirstNonRepeatingCharacter(test);
-    Console.WriteLine($"Input: '{test}' -> First non-repeating: {(result.HasValue ? result.ToString() : "None")}");
-}
+//foreach (string test in testCases)
+//{
+//    char? result = Find_the_first_non_repeating_character_in_a_string.FirstNonRepeatingCharacter(test);
+//    Console.WriteLine($"Input: '{test}' -> First non-repeating: {(result.HasValue ? result.ToString() : "None")}");
+//}
+//Console.WriteLine("First Repeating Character Finder");
+//Console.WriteLine("====================================\n");
+//foreach (string test in testCases)
+//{
+//    char? result = First_Repeating_Character_In_A_String.FirstRepeatingCharacterInAString(test);
+//    Console.WriteLine($"Input: '{test}' -> First repeating: {(result.HasValue ? result.ToString() : "None")}");
+//}
+
+
 
 //OR use this more comprehensive test cases
 

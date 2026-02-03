@@ -10,7 +10,6 @@
 
         //    Dictionary<char, int> charCount = new Dictionary<char, int>();
         //    Dictionary<char, int> DuplicateChar = new Dictionary<char, int>();
-        //    var uniqueChars = new HashSet<char>();
         //    foreach (char c in input)
         //    {
         //        if (charCount.ContainsKey(c))
@@ -45,7 +44,7 @@
         /// <returns></returns>
         public static Dictionary<char, int> FindDuplicateCharactersInAString(string input)
         {
-            input = "ronomerorr ";
+            //input = "ronomerorr ";
             if (string.IsNullOrEmpty(input))
                 return new Dictionary<char, int>();
 
@@ -64,21 +63,21 @@
                         DuplicateChar[c] = 2; // Since it's the second occurrence
                     }
                 }
-                
+
             }
             return DuplicateChar;
             //foreach (char c in input)
             //{
-            //    if (charCount.ContainsKey(c))
+            //    if (DuplicateChar.ContainsKey(c))
             //    {
-            //        charCount[c]++;
+            //        DuplicateChar[c]++;
             //    }
             //    else
             //    {
-            //        charCount[c] = 1;
+            //        DuplicateChar[c] = 1;
             //    }
             //}
-            //foreach (var kvp in charCount)
+            //foreach (var kvp in DuplicateChar)
             //{
             //    if (kvp.Value > 1)
             //    {
