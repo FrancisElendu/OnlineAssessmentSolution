@@ -44,20 +44,20 @@ using AssessmentOne;
 //• "apple" and "apples"         ← Different lengths
 
 
-string str1 = "astronomerorr ";
+//string str1 = "astronomerorr ";
 //string str2 = "moon starer";
 
 //var result = Check_If_Two_Strings_Are_Anagrams.AreAnagrams(str1, str2);
 //string resultStr = result ? "The two strings are Anagrams" : "The two strings are NOT Anagrams";
 //Console.WriteLine($"{resultStr}");
 
-var result = Find_All_Duplicate_Characters_In_A_String.FindDuplicateCharactersInAString(str1);
-Console.WriteLine($"Original string: {str1}");
-Console.WriteLine("Duplicate characters and their counts:");
-foreach (var kvp in result)
-{
-    Console.WriteLine($"Word: '{kvp.Key}' - Occurrences: {kvp.Value}");
-}
+//var result = Find_All_Duplicate_Characters_In_A_String.FindDuplicateCharactersInAString(str1);
+//Console.WriteLine($"Original string: {str1}");
+//Console.WriteLine("Duplicate characters and their counts:");
+//foreach (var kvp in result)
+//{
+//    Console.WriteLine($"Word: '{kvp.Key}' - Occurrences: {kvp.Value}");
+//}
 
 //int[] numbers = { 1, 2, 3, 2, 4, 1, 5, 3, 6 };
 //int[] uniqueNumbers = Remove_duplicate_elements_from_an_array_without_using_LINQ_Distinct.RemoveDuplicates(numbers);
@@ -82,6 +82,13 @@ foreach (var kvp in result)
 //    Console.WriteLine($"Character: '{kvp.Key}' - Occurrences: {kvp.Value}");
 //}
 
+int n = 15;
+var result = FizzBuzz_Solution.FizzBuzz(n);
+foreach (var item in result) 
+{
+    //Console.WriteLine($"FizzBuzz result : {item}");
+    Console.WriteLine($"FizzBuzz result :  Number - {item.Number}, Text - {item.Text}");
+}
 
 
 //foreach (string word in palindromeWords)

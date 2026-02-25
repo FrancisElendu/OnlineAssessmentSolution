@@ -8,7 +8,8 @@ namespace AssessmentOne
 {
     public class FizzBuzz_Solution
     {
-        public static string[] FizzBuzz(int n)
+        //public static string[] FizzBuzz(int n)
+        public static (int Number, string Text)[] FizzBuzz(int n)
         {
             if (n <= 0)
                 throw new ArgumentOutOfRangeException(nameof(n), "n must be greater than zero.");
@@ -19,7 +20,9 @@ namespace AssessmentOne
                     (5, "Buzz")
             };
 
-            var results = new string[n];
+            //var results = new string[n];
+            var results = new (int Number, string Text)[n];
+            //var sb = new StringBuilder();
 
             for (int i = 1; i <= n; i++)
             {
@@ -33,9 +36,12 @@ namespace AssessmentOne
                     }
                 }
 
+                //results[i - 1] = sb.Length > 0
+                //    ? sb.ToString()
+                //    : i.ToString();
                 results[i - 1] = sb.Length > 0
-                    ? sb.ToString()
-                    : i.ToString();
+                    ? (i,sb.ToString())
+                    : (i,i.ToString());
             }
 
             return results;
