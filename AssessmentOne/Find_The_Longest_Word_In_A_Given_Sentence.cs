@@ -1,4 +1,6 @@
-﻿namespace AssessmentOne
+﻿using System.Collections.Generic;
+
+namespace AssessmentOne
 {
     public class Find_The_Longest_Word_In_A_Given_Sentence
     {
@@ -37,31 +39,55 @@
         /// </summary>
         /// <param name="sentence"></param>
         /// <returns></returns>
+        //public static Dictionary<string, int> FindLongestWordInASentence(string sentence)
+        //{
+        //    if (string.IsNullOrWhiteSpace(sentence))
+        //        return null;
+
+        //    // Split the sentence into words based on spaces and punctuation
+        //    char[] delimiters = new char[] { ' ', ',', '.', ';', '!', '?', '-', '\n', '\r', '\t' };
+        //    string[] words = sentence.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
+        //    Dictionary<string, int> longestWords = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
+        //    int maxLength = 0;
+
+        //    foreach (string word in words)
+        //    {
+        //        string trimmedWord = word.Trim().ToLower();
+        //        if (trimmedWord.Length > maxLength)
+        //        {
+        //            maxLength = trimmedWord.Length;
+        //            longestWords.Clear();
+        //            longestWords[trimmedWord] = trimmedWord.Length;
+        //        }
+        //        else if (trimmedWord.Length == maxLength)
+        //        {
+        //            longestWords[trimmedWord] = trimmedWord.Length;
+        //        }
+        //    }
+        //    return longestWords;
+        //}
+
+        //try new method
         public static Dictionary<string, int> FindLongestWordInASentence(string sentence)
         {
             if (string.IsNullOrWhiteSpace(sentence))
-                return null;
+                return default;
 
             // Split the sentence into words based on spaces and punctuation
             char[] delimiters = new char[] { ' ', ',', '.', ';', '!', '?', '-', '\n', '\r', '\t' };
             string[] words = sentence.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
-            Dictionary<string, int> longestWords = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
-            int maxLength = 0;
+            Dictionary<string, int> wordWithLength = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
 
             foreach (string word in words)
             {
-                string trimmedWord = word.Trim().ToLower();
-                if (trimmedWord.Length > maxLength)
+                if (!wordWithLength.ContainsKey(word))
                 {
-                    maxLength = trimmedWord.Length;
-                    longestWords.Clear();
-                    longestWords[trimmedWord] = trimmedWord.Length;
+                    wordWithLength.Add(word, word.Length);
                 }
-                else if (trimmedWord.Length == maxLength)
-                {
-                    longestWords[trimmedWord] = trimmedWord.Length;
-                }
+
             }
+            var maxValue = wordWithLength.MaxBy(x => x.Value);
+            var longestWords = wordWithLength.Where(kvp => kvp.Value == maxValue.Value).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
             return longestWords;
         }
     }

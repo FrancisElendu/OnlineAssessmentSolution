@@ -44,7 +44,7 @@ using AssessmentOne;
 //• "apple" and "apples"         ← Different lengths
 
 
-//string str1 = "astronomerorr ";
+//string str1 = "ronomerorr ";
 //string str2 = "moon starer";
 
 //var result = Check_If_Two_Strings_Are_Anagrams.AreAnagrams(str1, str2);
@@ -63,13 +63,14 @@ using AssessmentOne;
 //int[] uniqueNumbers = Remove_duplicate_elements_from_an_array_without_using_LINQ_Distinct.RemoveDuplicates(numbers);
 //string[] words = { "orange", "apple", "banana", "apple", "banana", "grape" };
 //string[] palindromeWords = { "radar", "racecar", "level", "kayak", "civic", "madam", "noon", "refer", "rotor", "tenet", "Able was I ere I saw Elba", "Rats live on no evil star", "Never odd or even" };
-//string sentence = "the quick brown fox jumps over the lazy dog";
-//var longestWordInASentence = Find_The_Longest_Word_In_A_Given_Sentence.FindLongestWordInASentence(sentence);
-//Console.WriteLine($"\nAll max value entries ({longestWordInASentence.Count}):");
-//foreach (var entry in longestWordInASentence)
-//{
-//    Console.WriteLine($"  {entry.Key}: {entry.Value}");
-//}
+string sentence = "the quick brown fox jumps over the lazy dog";
+var longestWordInASentence = Find_The_Longest_Word_In_A_Given_Sentence.FindLongestWordInASentence(sentence);
+//Console.WriteLine($"{longestWordInASentence.Key} - {longestWordInASentence.Value}");
+Console.WriteLine($"\nAll max value entries ({longestWordInASentence.Count}):");
+foreach (var entry in longestWordInASentence)
+{
+    Console.WriteLine($"  {entry.Key}: {entry.Value}");
+}
 //var wordCounts = Count_The_Occurence_Of_Each_Word_In_A_Sentence.CountWordOccurrences(sentence);
 //foreach (var kvp in wordCounts)
 //{
@@ -82,13 +83,13 @@ using AssessmentOne;
 //    Console.WriteLine($"Character: '{kvp.Key}' - Occurrences: {kvp.Value}");
 //}
 
-int n = 15;
-var result = FizzBuzz_Solution.FizzBuzz(n);
-foreach (var item in result) 
-{
-    //Console.WriteLine($"FizzBuzz result : {item}");
-    Console.WriteLine($"FizzBuzz result :  Number - {item.Number}, Text - {item.Text}");
-}
+//int n = 15;
+//var result = FizzBuzz_Solution.FizzBuzz(n);
+//foreach (var item in result) 
+//{
+//    //Console.WriteLine($"FizzBuzz result : {item}");
+//    Console.WriteLine($"FizzBuzz result :  Number - {item.Number}, Text - {item.Text}");
+//}
 
 
 //foreach (string word in palindromeWords)
