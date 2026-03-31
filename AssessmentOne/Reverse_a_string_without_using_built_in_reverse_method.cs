@@ -3,6 +3,7 @@
     public class Reverse_a_string_without_using_built_in_reverse_method
     {
         public static string ReverseString(string input)
+        
         {
             if (string.IsNullOrEmpty(input))
                 return input;

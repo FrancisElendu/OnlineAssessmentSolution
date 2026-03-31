@@ -3,6 +3,8 @@
 
 using AssessmentOne;
 
+var result = Maximizing_Game_Piece_Moves.solution(new int[] { 1, 1, 0, 0, 1 }); //{ 1, 0, 0, 1, 0 }
+
 //var teacher = new LanguageTeacher();
 //teacher.AddLanguage("English");
 //teacher.AddLanguage("French");
@@ -62,15 +64,15 @@ using AssessmentOne;
 //int[] numbers = { 1, 2, 3, 2, 4, 1, 5, 3, 6 };
 //int[] uniqueNumbers = Remove_duplicate_elements_from_an_array_without_using_LINQ_Distinct.RemoveDuplicates(numbers);
 //string[] words = { "orange", "apple", "banana", "apple", "banana", "grape" };
-//string[] palindromeWords = { "radar", "racecar", "level", "kayak", "civic", "madam", "noon", "refer", "rotor", "tenet", "Able was I ere I saw Elba", "Rats live on no evil star", "Never odd or even" };
-string sentence = "the quick brown fox jumps over the lazy dog";
-var longestWordInASentence = Find_The_Longest_Word_In_A_Given_Sentence.FindLongestWordInASentence(sentence);
+string[] palindromeWords = { "orange", "radar", "racecar", "level", "kayak", "civic", "madam", "noon", "refer", "rotor", "tenet", "Able was I ere I saw Elba", "Rats live on no evil star", "Never odd or even" };
+//string sentence = "the quick brown fox jumps over the lazy dog";
+//var longestWordInASentence = Find_The_Longest_Word_In_A_Given_Sentence.FindLongestWordInASentence(sentence);
 //Console.WriteLine($"{longestWordInASentence.Key} - {longestWordInASentence.Value}");
-Console.WriteLine($"\nAll max value entries ({longestWordInASentence.Count}):");
-foreach (var entry in longestWordInASentence)
-{
-    Console.WriteLine($"  {entry.Key}: {entry.Value}");
-}
+//Console.WriteLine($"\nAll max value entries ({longestWordInASentence.Count}):");
+//foreach (var entry in longestWordInASentence)
+//{
+//    Console.WriteLine($"  {entry.Key}: {entry.Value}");
+//}
 //var wordCounts = Count_The_Occurence_Of_Each_Word_In_A_Sentence.CountWordOccurrences(sentence);
 //foreach (var kvp in wordCounts)
 //{
@@ -96,9 +98,9 @@ foreach (var entry in longestWordInASentence)
 //{
 //    var result = Reverse_a_string_without_using_built_in_reverse_method.ReverseString(word.ToLower());
 //    if (word.ToLower() == result)
-//        Console.WriteLine($"The string: {word} is a Palindrome");
+//        Console.WriteLine($"The string: {word} is a Palindrome because after reversing the string, we got {result}");
 //    else
-//        Console.WriteLine($"The string: {word} is NOT a Palindrome");
+//        Console.WriteLine($"The string: {word} is NOT a Palindrome because after reversing the string, we got {result}");
 //}
 
 //var reversedWords = Reverse_Words_In_A_Sentense.ReverseEachWordAndItsPositionInASentense(words);
