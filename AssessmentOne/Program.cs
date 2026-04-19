@@ -1,7 +1,4 @@
-﻿//// See https://aka.ms/new-console-template for more information
-//Console.WriteLine("Hello, World!");
-
-using AssessmentOne;
+﻿using AssessmentOne;
 
 var result = Maximizing_Game_Piece_Moves.solution(new int[] { 1, 1, 0, 0, 1 }); //{ 1, 0, 0, 1, 0 }
 
