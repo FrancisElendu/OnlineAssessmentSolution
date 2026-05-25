@@ -1,6 +1,40 @@
 ﻿using AssessmentOne;
 
-var result = Maximizing_Game_Piece_Moves.solution(new int[] { 1, 1, 0, 0, 1 }); //{ 1, 0, 0, 1, 0 }
+//string input = "remove duplicates";
+//string input2 = "remove";
+//string input3 = "duplicates";
+//var result = RemoveDuplicateCharacters_Solution.RemoveDuplicateCharacters(input2);
+//Console.WriteLine(result.ToString());
+//foreach (char word in result)
+//{
+//    Console.Write($"{word} ");
+//}
+
+
+
+//// For integers
+//int[] intArray1 = { 3, 1, 4 };
+//int[] intArray2 = { 2, 5, 0 };
+//int[] mergedInts = MergeTwoArrays_Solution.MergeTwoArrays(intArray1, intArray2);
+//// Result: [0, 1, 2, 3, 4, 5]
+
+//// For strings
+//string[] stringArray1 = { "banana", "apple" };
+//string[] stringArray2 = { "date", "cherry" };
+//string[] mergedStrings = MergeTwoArrays_Solution.MergeTwoArrays(stringArray1, stringArray2);
+
+//var result = Maximizing_Game_Piece_Moves.solution(new int[] { 1, 1, 0, 0, 1 }); //{ 1, 0, 0, 1, 0 }
+
+//List<Animal> animals = new List<Animal>
+//{
+//    new Dog { Name = "Buddy" },
+//    new Cat { Name = "Whiskers" },
+//    new Bird { Name = "Tweety" }
+//};
+//foreach (var animal in animals)
+//{
+//    animal.Speak();
+//}
 
 //var teacher = new LanguageTeacher();
 //teacher.AddLanguage("English");
@@ -60,8 +94,10 @@ var result = Maximizing_Game_Piece_Moves.solution(new int[] { 1, 1, 0, 0, 1 }); 
 
 //int[] numbers = { 1, 2, 3, 2, 4, 1, 5, 3, 6 };
 //int[] uniqueNumbers = Remove_duplicate_elements_from_an_array_without_using_LINQ_Distinct.RemoveDuplicates(numbers);
-//string[] words = { "orange", "apple", "banana", "apple", "banana", "grape" };
-string[] palindromeWords = { "orange", "radar", "racecar", "level", "kayak", "civic", "madam", "noon", "refer", "rotor", "tenet", "Able was I ere I saw Elba", "Rats live on no evil star", "Never odd or even" };
+string[] words = { "orange", "apple", "banana", "apple", "banana", "grape" };
+string[] uniqueStrings = Remove_duplicate_elements_from_an_array_without_using_LINQ_Distinct.RemoveDuplicates(words);
+Console.ReadLine();
+//string[] palindromeWords = { "orange", "radar", "racecar", "level", "kayak", "civic", "madam", "noon", "refer", "rotor", "tenet", "Able was I ere I saw Elba", "Rats live on no evil star", "Never odd or even" };
 //string sentence = "the quick brown fox jumps over the lazy dog";
 //var longestWordInASentence = Find_The_Longest_Word_In_A_Given_Sentence.FindLongestWordInASentence(sentence);
 //Console.WriteLine($"{longestWordInASentence.Key} - {longestWordInASentence.Value}");

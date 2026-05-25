@@ -16,6 +16,10 @@
         //        {
         //            result.Add(item);
         //        }
+        //        else
+        //        {
+        //            result.Remove(item); // Remove the duplicate element
+        //        }
         //    }
 
         //    return result.ToArray();
@@ -31,7 +35,9 @@
 
             foreach (T item in array)
             {
-                uniqueElements.Add(item);
+                if (!uniqueElements.Add(item)) {
+                    uniqueElements.Remove(item); // Remove the duplicate element
+                }
             }
 
             return uniqueElements.ToArray();
