@@ -1,5 +1,39 @@
 ﻿using AssessmentOne;
 
+
+Console.WriteLine("Welcome to the Word Parser Coding Challenge");                   
+//var wordParser = new WordParser(); 
+var words = GetWords();                   
+var distinctWordsDelimitedString = WordParser.ReturnUniqueWordsDelimited(words, delimiter: ",");                   
+Console.WriteLine("ReturnUniqueWordsDelimited returned a count of " + distinctWordsDelimitedString.Split(',').Length);                   
+var duplicateWordsList = WordParser.ReturnWordsWithDuplicatesList(words);                   
+Console.WriteLine("ReturnWordsWithDuplicatesList returned a count of " + duplicateWordsList.Count);                   
+var duplicatesDTOArray = WordParser.ReturnDuplicatesDTO(words);                   
+Console.WriteLine("ReturnDuplicatesDTO returned a count of " + duplicatesDTOArray.Length);                   
+Console.WriteLine("This concludes the Word Parser Coding Challenge!");                   
+Console.WriteLine("Thank you for participating!");              
+static Dictionary<string, string> GetWords() 
+{ 
+    var words = new Dictionary<string, string>(); 
+    words.Add("policeman", "bad_data"); 
+    words.Add("calculation", " "); 
+    words.Add("thread", "bad_data"); 
+    words.Add("despair", "bad_data"); 
+    words.Add("reflection", "bad_data"); 
+    words.Add("penetrate", "bad_data"); 
+    words.Add("conference", "bad_data"); 
+    words.Add("worry", "bad_data"); 
+    words.Add("divide", "bad_data"); 
+    words.Add("organ", "bad_data"); 
+    words.Add("limited", "bad_data"); 
+    words.Add("smile", "bad_data"); 
+    words.Add("strain", "bad_data"); 
+    words.Add("expect", "bad_data"); 
+    words.Add("alcohol", "bad_data"); 
+    words.Add("moment", ""); 
+    return words; 
+}
+
 //string input = "remove duplicates";
 //string input2 = "remove";
 //string input3 = "duplicates";
@@ -94,9 +128,9 @@
 
 //int[] numbers = { 1, 2, 3, 2, 4, 1, 5, 3, 6 };
 //int[] uniqueNumbers = Remove_duplicate_elements_from_an_array_without_using_LINQ_Distinct.RemoveDuplicates(numbers);
-string[] words = { "orange", "apple", "banana", "apple", "banana", "grape" };
-string[] uniqueStrings = Remove_duplicate_elements_from_an_array_without_using_LINQ_Distinct.RemoveDuplicates(words);
-Console.ReadLine();
+//string[] words = { "orange", "apple", "banana", "apple", "banana", "grape" };
+//string[] uniqueStrings = Remove_duplicate_elements_from_an_array_without_using_LINQ_Distinct.RemoveDuplicates(words);
+//Console.ReadLine();
 //string[] palindromeWords = { "orange", "radar", "racecar", "level", "kayak", "civic", "madam", "noon", "refer", "rotor", "tenet", "Able was I ere I saw Elba", "Rats live on no evil star", "Never odd or even" };
 //string sentence = "the quick brown fox jumps over the lazy dog";
 //var longestWordInASentence = Find_The_Longest_Word_In_A_Given_Sentence.FindLongestWordInASentence(sentence);
