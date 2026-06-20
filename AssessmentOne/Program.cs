@@ -1,37 +1,44 @@
 ﻿using AssessmentOne;
 
+//int[,] multiDimArray = new int[3, 4]
+//            {
+//                {1, 2, 3, 4},
+//                {5, 6, 7, 8},
+//                {9, 10, 11, 12}
+//            };
+//MultiDimArrays.MultiDimArrayExample(multiDimArray);
 
-Console.WriteLine("Welcome to the Word Parser Coding Challenge");                   
+Console.WriteLine("Welcome to the Word Parser Coding Challenge");
 //var wordParser = new WordParser(); 
-var words = GetWords();                   
-var distinctWordsDelimitedString = WordParser.ReturnUniqueWordsDelimited(words, delimiter: ",");                   
-Console.WriteLine("ReturnUniqueWordsDelimited returned a count of " + distinctWordsDelimitedString.Split(',').Length);                   
-var duplicateWordsList = WordParser.ReturnWordsWithDuplicatesList(words);                   
-Console.WriteLine("ReturnWordsWithDuplicatesList returned a count of " + duplicateWordsList.Count);                   
-var duplicatesDTOArray = WordParser.ReturnDuplicatesDTO(words);                   
-Console.WriteLine("ReturnDuplicatesDTO returned a count of " + duplicatesDTOArray.Length);                   
-Console.WriteLine("This concludes the Word Parser Coding Challenge!");                   
-Console.WriteLine("Thank you for participating!");              
-static Dictionary<string, string> GetWords() 
-{ 
-    var words = new Dictionary<string, string>(); 
-    words.Add("policeman", "bad_data"); 
-    words.Add("calculation", " "); 
-    words.Add("thread", "bad_data"); 
-    words.Add("despair", "bad_data"); 
-    words.Add("reflection", "bad_data"); 
-    words.Add("penetrate", "bad_data"); 
-    words.Add("conference", "bad_data"); 
-    words.Add("worry", "bad_data"); 
-    words.Add("divide", "bad_data"); 
-    words.Add("organ", "bad_data"); 
-    words.Add("limited", "bad_data"); 
-    words.Add("smile", "bad_data"); 
-    words.Add("strain", "bad_data"); 
-    words.Add("expect", "bad_data"); 
-    words.Add("alcohol", "bad_data"); 
-    words.Add("moment", ""); 
-    return words; 
+var words = GetWords();
+var distinctWordsDelimitedString = WordParser_Without_Linq_Solution.ReturnUniqueWordsDelimited(words, delimiter: ",");
+Console.WriteLine("ReturnUniqueWordsDelimited returned a count of " + distinctWordsDelimitedString.Split(',').Length);
+var duplicateWordsList = WordParser_Without_Linq_Solution.ReturnWordsWithDuplicatesList(words);
+Console.WriteLine("ReturnWordsWithDuplicatesList returned a count of " + duplicateWordsList.Count);
+var duplicatesDTOArray = WordParser_Without_Linq_Solution.ReturnDuplicatesDTO(words);
+Console.WriteLine("ReturnDuplicatesDTO returned a count of " + duplicatesDTOArray.Length);
+Console.WriteLine("This concludes the Word Parser Coding Challenge!");
+Console.WriteLine("Thank you for participating!");
+static Dictionary<string, string> GetWords()
+{
+    var words = new Dictionary<string, string>();
+    words.Add("policeman", "bad_data");
+    words.Add("calculation", " ");
+    words.Add("thread", "bad_data");
+    words.Add("despair", "bad_data");
+    words.Add("reflection", "bad_data");
+    words.Add("penetrate", "bad_data");
+    words.Add("conference", "bad_data");
+    words.Add("worry", "bad_data");
+    words.Add("divide", "bad_data");
+    words.Add("organ", "bad_data");
+    words.Add("limited", "bad_data");
+    words.Add("smile", "bad_data");
+    words.Add("strain", "bad_data");
+    words.Add("expect", "bad_data");
+    words.Add("alcohol", "bad_data");
+    words.Add("moment", "");
+    return words;
 }
 
 //string input = "remove duplicates";
