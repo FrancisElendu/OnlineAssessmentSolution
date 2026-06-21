@@ -99,5 +99,56 @@
 
             return string.Join(" ", results);
         }
+
+        //solution breaking tasks into separate methods
+        public async Task<string> PigLatinWithSeparateMethodForEachTask(string sentence)
+        {
+            if (string.IsNullOrWhiteSpace(sentence))
+            {
+                return string.Empty;
+            }
+
+            string[] words = sentence.Split(
+                ' ',
+                StringSplitOptions.RemoveEmptyEntries);
+
+            Task<string>[] tasks = new Task<string>[words.Length];
+
+            for (int i = 0; i < words.Length; i++)
+            {
+                string word = words[i];
+
+                tasks[i] = Task.FromResult(word)
+                    .ContinueWith(ToLowerCase)
+                    .ContinueWith(MoveFirstCharacterToEnd)
+                    .ContinueWith(AppendAy);
+            }
+
+            string[] results = await Task.WhenAll(tasks);
+
+            return string.Join(" ", results);
+        }
+
+        private static string ToLowerCase(Task<string> task)
+        {
+            return task.Result.ToLowerInvariant();
+        }
+
+        private static string MoveFirstCharacterToEnd(Task<string> task)
+        {
+            string word = task.Result;
+
+            if (word.Length <= 1)
+            {
+                return word;
+            }
+
+            return word.Substring(1) + word[0];
+        }
+
+        private static string AppendAy(Task<string> task)
+        {
+            return task.Result + "ay";
+        }
     }
 }
